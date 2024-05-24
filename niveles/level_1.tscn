@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpc03ffsvy6x5"]
+
+[ext_resource type="PackedScene" uid="uid://bl7v06pw5cgn8" path="res://suelo/puente.tscn" id="1_bo4td"]
+[ext_resource type="Texture2D" uid="uid://c8s7a7pml0r26" path="res://assets/kenney/decoration/background_treeLarge.png" id="1_swk5f"]
+[ext_resource type="Texture2D" uid="uid://b5p5l0ed7x6dv" path="res://assets/kenney/decoration/background_tree.png" id="2_2t8up"]
+[ext_resource type="PackedScene" uid="uid://clewoybm7g4av" path="res://suelo/platform.tscn" id="2_ljs2i"]
+[ext_resource type="Texture2D" uid="uid://cth1syxqeke3a" path="res://assets/kenney/decoration/background_cloudB.png" id="3_8fcbi"]
+[ext_resource type="PackedScene" uid="uid://ct0hoopncvb71" path="res://suelo/top.tscn" id="3_d42jd"]
+[ext_resource type="PackedScene" uid="uid://ito17hofny83" path="res://enemigos/barril.tscn" id="4_awlq2"]
+[ext_resource type="Texture2D" uid="uid://occvfbsxixuw" path="res://assets/kenney/decoration/background_cloudA.png" id="4_f76lo"]
+[ext_resource type="PackedScene" uid="uid://cpisgguvx3jri" path="res://personaje/personaje.tscn" id="5_gnm5n"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="decoracion" type="Node2D" parent="."]
+position = Vector2(1, 6)
+
+[node name="BackgroundTreeLarge" type="Sprite2D" parent="decoracion"]
+position = Vector2(103, 408)
+texture = ExtResource("1_swk5f")
+
+[node name="BackgroundTreeLarge2" type="Sprite2D" parent="decoracion"]
+position = Vector2(200, 403)
+texture = ExtResource("1_swk5f")
+
+[node name="BackgroundTree" type="Sprite2D" parent="decoracion"]
+position = Vector2(155, 406)
+texture = ExtResource("2_2t8up")
+
+[node name="BackgroundTreeLarge3" type="Sprite2D" parent="decoracion"]
+position = Vector2(1199, 331)
+texture = ExtResource("1_swk5f")
+
+[node name="BackgroundCloudB" type="Sprite2D" parent="decoracion"]
+position = Vector2(301, -428)
+texture = ExtResource("3_8fcbi")
+
+[node name="BackgroundCloudA" type="Sprite2D" parent="decoracion"]
+position = Vector2(839, -428)
+texture = ExtResource("4_f76lo")
+
+[node name="BackgroundCloudA2" type="Sprite2D" parent="decoracion"]
+position = Vector2(555, -424)
+texture = ExtResource("4_f76lo")
+
+[node name="BackgroundCloudB2" type="Sprite2D" parent="decoracion"]
+position = Vector2(1105, -369)
+texture = ExtResource("3_8fcbi")
+
+[node name="Personaje" parent="." instance=ExtResource("5_gnm5n")]
+position = Vector2(191, 438)
+
+[node name="Camera2D" type="Camera2D" parent="Personaje"]
+position = Vector2(-191, -438)
+
+[node name="Barril" parent="." instance=ExtResource("4_awlq2")]
+position = Vector2(838, -76)
+
+[node name="Barril2" parent="." instance=ExtResource("4_awlq2")]
+position = Vector2(744, 70)
+
+[node name="Barril3" parent="." instance=ExtResource("4_awlq2")]
+position = Vector2(557, 94)
+
+[node name="Barril4" parent="." instance=ExtResource("4_awlq2")]
+position = Vector2(316, 124)
+
+[node name="Barril5" parent="." instance=ExtResource("4_awlq2")]
+position = Vector2(555, 246)
+
+[node name="Suelos" type="Node2D" parent="."]
+
+[node name="Puente" parent="Suelos" instance=ExtResource("1_bo4td")]
+position = Vector2(554, 452)
+rotation = -0.0728729
+scale = Vector2(1, 1)
+
+[node name="Puente2" parent="Suelos" instance=ExtResource("2_ljs2i")]
+position = Vector2(585, 292)
+rotation = 0.0761864
+
+[node name="Puente3" parent="Suelos" instance=ExtResource("2_ljs2i")]
+position = Vector2(679, 126)
+rotation = -0.113416
+
+[node name="Puente4" parent="Suelos" instance=ExtResource("2_ljs2i")]
+position = Vector2(578, -40)
+rotation = 0.082908
+
+[node name="Puente5" parent="Suelos" instance=ExtResource("2_ljs2i")]
+position = Vector2(765, -167)
+rotation = -0.0400493
+
+[node name="Top" parent="Suelos" instance=ExtResource("3_d42jd")]
+position = Vector2(209, -265)
+
+[node name="Top2" parent="Suelos" instance=ExtResource("3_d42jd")]
+position = Vector2(628, -251)
+rotation = 0.0703921

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://clewoybm7g4av"]
+
+[ext_resource type="Texture2D" uid="uid://s8xcxmu6o7bs" path="res://assets/kenney/floor/ladder.png" id="1_15lpu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cj52v"]
+size = Vector2(13.0244, 4.56807)
+
+[node name="Puente" type="StaticBody2D"]
+
+[node name="Bridge" type="Sprite2D" parent="."]
+position = Vector2(0, 13)
+texture = ExtResource("1_15lpu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.49999, 0)
+scale = Vector2(71.3274, 3.68194)
+shape = SubResource("RectangleShape2D_cj52v")
